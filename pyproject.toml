@@ -28,7 +28,7 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.pytest.ini_options]
-pythonpaths = "."
+pythonpath = "."
 addopts = "--doctest-modules"
 
 [tool.isort]
@@ -39,7 +39,7 @@ line_length = 79   # black default é 88
 lint = "blue --check --diff . && isort --check --diff ."
 docs = "mkdocs serve"
 pre_test = "task lint"
-test = "pytest -s -x --cov=notas_musicais - vv"
+test = "pytest -s -x --cov=notas_musicais -vv"
 post_test = "coverage html"
 
 
